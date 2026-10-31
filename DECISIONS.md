@@ -5,6 +5,12 @@ Nothing here is final until the owner says so; open questions live at the bottom
 
 ## Decided
 
+### 2026-10-31 — EEL's Linux programs are tested under QEMU (owner: "QEMU")
+
+Design claude offered Colima containers with GitHub Actions later (recommended), VMware Fusion VMs (AArch64 guests only
+on Apple Silicon), QEMU's full-system emulation, or GitHub Actions alone. The owner: "QEMU". So **Linux x86-64 and
+AArch64 programs are tested in QEMU 11 virtual machines**, each CPU emulated as real hardware would run it.
+
 ### 2026-10-31 — EEL compiles for macOS on Apple Silicon and Linux on x86-64 and AArch64 (owner: "1, 2")
 
 Inline binary is one CPU's machine code, so each target is a CPU its programs' inline binary must be written for.
