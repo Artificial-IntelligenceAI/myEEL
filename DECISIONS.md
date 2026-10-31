@@ -5,6 +5,12 @@ Nothing here is final until the owner says so; open questions live at the bottom
 
 ## Decided
 
+### 2026-10-31 — EEL source files end `.myEEL` (owner: "`.myEEL`")
+
+Design claude found `.eel` free in GitHub Linguist but used by REAPER's EEL2 scripts ("The type of script will be
+deduced from the file extension you enter (.eel, .lua, or .py)", reaper.fm/sdk/reascript), and recommended `.eel`
+anyway. The owner: "`.myEEL`". So **an EEL source file is `name.myEEL`**, matching the repository's name.
+
 ### 2026-10-31 — The compiler's command is `eel` (owner: "yes")
 
 Design claude offered `eel`, the language's own name, or a name of the compiler's own (as CyborgPL's was `kayo`), and
@@ -119,4 +125,4 @@ The owner: "commit style: Soclets/CyborgPL". `kind.folder.narrowing: sentence`, 
   proposals are in `design/hosts.md`, H1–H6: the host language, backends, platforms, tools, dependencies, hosting.
   Settled: H1 C++23 built by clang 23 with CMake and Ninja, H2 LLVM 23, H3 macOS AArch64 + Linux x86-64 and AArch64. Design claude recommends, for the rest, a CLI and a
   browser stepper that is also the playground, no crates in the interpreter, GitHub Pages and releases.
-- Still open from `design/pitches.md`'s list: Turing completeness, the file extension, what "EEL" stands for.
+- Still open from `design/pitches.md`'s list: Turing completeness, what "EEL" stands for.
