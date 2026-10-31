@@ -5,6 +5,12 @@ Nothing here is final until the owner says so; open questions live at the bottom
 
 ## Decided
 
+### 2026-10-31 — CMake and Ninja build EEL's compiler (owner: "yup")
+
+Design claude offered CMake + Ninja (installed, 4.4.3 and 1.13.2; LLVM ships `LLVMConfig.cmake`, so
+`find_package(LLVM 23 CONFIG)` brings its headers, libraries and flags), Meson, a plain Makefile, or another, and
+recommended CMake + Ninja. The owner: "yup".
+
 ### 2026-10-31 — EEL's compiler is built by clang 23, from `llvm@23` (owner: "yes")
 
 Asked which C++ compiler builds EEL's compiler, the owner: "Clang? We don't have C syntax, nor is it another C++".
@@ -84,6 +90,6 @@ The owner: "commit style: Soclets/CyborgPL". `kind.folder.narrowing: sentence`, 
 
 - **The hosts, first** (owner, 2026-10-31: "Let's do hosts first (tools, langs, backends, etc)"). Design claude's
   proposals are in `design/hosts.md`, H1–H6: the host language, backends, platforms, tools, dependencies, hosting.
-  Settled: H1 C++23 built by clang 23, H2 LLVM 23. Design claude recommends, for the rest, macOS and the browser first, a CLI and a
+  Settled: H1 C++23 built by clang 23 with CMake and Ninja, H2 LLVM 23. Design claude recommends, for the rest, macOS and the browser first, a CLI and a
   browser stepper that is also the playground, no crates in the interpreter, GitHub Pages and releases.
 - Still open from `design/pitches.md`'s list: Turing completeness, the file extension, what "EEL" stands for.
