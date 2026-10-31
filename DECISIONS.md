@@ -5,6 +5,15 @@ Nothing here is final until the owner says so; open questions live at the bottom
 
 ## Decided
 
+### 2026-10-31 — EEL's compiler is built by clang 23, from `llvm@23` (owner: "yes")
+
+Asked which C++ compiler builds EEL's compiler, the owner: "Clang? We don't have C syntax, nor is it another C++".
+Design claude explained that clang never reads EEL: it compiles EEL's compiler, itself a C++23 program, and `eel`
+then reads EEL and hands LLVM IR to LLVM, as clang does for C++. "Oh, why not the same compiler for that C++?": clang
+23 is LLVM 23's own C++ front end, in the same package. The owner: "yes". So **clang 23 from `llvm@23` builds EEL's
+compiler**, not Apple's clang 21 or GCC 16 (which cannot use LLVM's C++ API). Self-hosting, EEL's compiler written in
+EEL, stays possible later.
+
 ### 2026-10-31 — C++23 (owner: "C++23")
 
 Strictly, the latest standard clang 23 fully supports is C++17, and only its language: libc++ 23 has finished no
@@ -75,6 +84,6 @@ The owner: "commit style: Soclets/CyborgPL". `kind.folder.narrowing: sentence`, 
 
 - **The hosts, first** (owner, 2026-10-31: "Let's do hosts first (tools, langs, backends, etc)"). Design claude's
   proposals are in `design/hosts.md`, H1–H6: the host language, backends, platforms, tools, dependencies, hosting.
-  Settled: H1 C++, H2 LLVM 23. Design claude recommends, for the rest, macOS and the browser first, a CLI and a
+  Settled: H1 C++23 built by clang 23, H2 LLVM 23. Design claude recommends, for the rest, macOS and the browser first, a CLI and a
   browser stepper that is also the playground, no crates in the interpreter, GitHub Pages and releases.
 - Still open from `design/pitches.md`'s list: Turing completeness, the file extension, what "EEL" stands for.
