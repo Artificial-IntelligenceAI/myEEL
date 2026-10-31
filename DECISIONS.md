@@ -5,6 +5,14 @@ Nothing here is final until the owner says so; open questions live at the bottom
 
 ## Decided
 
+### 2026-10-31 — The QEMU machines run Ubuntu 24.04 LTS, the Linux Claude's own sessions run on (owner: "The one that Claude uses")
+
+Design claude offered Debian 13 (recommended), Ubuntu 26.04 LTS, Alpine (musl) or Arch. The owner: "The one that
+Claude uses". Anthropic's docs: Claude Code's cloud sessions run "Ubuntu 24.04 on x86_64"
+(code.claude.com/docs/en/cloud-environments), as do Managed Agents' sandboxes ("Ubuntu 24.04 LTS"); the API's code
+execution tool says only "Linux-based container". So **both QEMU machines, x86-64 and AArch64, run Ubuntu 24.04
+LTS**, with glibc as the C library EEL's Linux programs meet.
+
 ### 2026-10-31 — EEL's Linux programs are tested under QEMU (owner: "QEMU")
 
 Design claude offered Colima containers with GitHub Actions later (recommended), VMware Fusion VMs (AArch64 guests only
