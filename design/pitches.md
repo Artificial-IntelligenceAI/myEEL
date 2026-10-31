@@ -1,5 +1,8 @@
 # EEL — first pitches
 
+> **Superseded, 2026-10-31.** The owner gave EEL's own concept instead (`DECISIONS.md`, "EEL is the owner's fictional
+> language, made real"). Kept as history.
+
 Design claude's proposals, 2026-10-31, for the owner to pick from, mix, or throw out. **Nothing here is decided.**
 The sketches only show the idea; every symbol in them is a placeholder.
 

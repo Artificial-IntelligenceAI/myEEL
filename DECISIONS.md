@@ -5,6 +5,21 @@ Nothing here is final until the owner says so; open questions live at the bottom
 
 ## Decided
 
+### 2026-10-31 — EEL is the owner's fictional language, made real: everything is imported from the internet (owner)
+
+The owner: "EEL context: it was a fictional language that imports from the internet, has no stdout (it uses an import
+for each output, say to a file, to a GUI, to a fucking printer), it can write inline binary, and in lore it was C
+speed, painful to write & obviously painful to debug (even err msgs are an import)". So EEL:
+
+- **imports from the internet**;
+- **has no stdout**: every output is an import, one for each place it goes (a file, a GUI, a printer);
+- **can write inline binary**;
+- **was C speed**, in the lore;
+- is **painful to write and to debug**, and **even its error messages are an import**.
+
+This replaces design claude's five pitches (`design/pitches.md`), none of which the owner took. Not yet designed: the
+syntax, what an import is and how it is fetched, what inline binary means exactly.
+
 ### 2026-10-31 — The owner decides; sessions suggest, in plain text, never by popup (owner)
 
 The owner: "Let's design/make EEL. Design choices are mine to make, you could suggest. Use whatever's needed, except

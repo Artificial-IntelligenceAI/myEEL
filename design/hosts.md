@@ -35,6 +35,20 @@ it. C Charge and E Knot compile cleanly.
 **Recommendation: (1) only, for now**, written as the executable spec, as CyborgPL's oracle was: it does what
 `DECISIONS.md` settles and refuses the rest. A compiled backend later, if the concept allows and the owner wants one.
 
+**Revised with the owner's concept (2026-10-31).** C speed and inline binary need a native, optimising backend.
+The owner asked: Cranelift, LLVM or GCC?
+
+| | Cranelift | LLVM | GCC |
+|---|---|---|---|
+| Code it makes | good, not C's | C's (clang's own optimiser) | C's (gcc's) |
+| Inline binary | no inline assembly; raw bytes only as a separate function called through a pointer | inline assembly, so `.byte` lands in the middle of a function | inline assembly, `.byte` the same |
+| WebAssembly out | no | yes | no |
+| Here | a Cargo crate | 21, 22, 23 (Homebrew) | `gcc-16` (Homebrew), no libgccjit; Apple Silicon support from a fork, not upstream |
+| Ties the host to | Rust | any (C API) | C (libgccjit), or C emitted and built by `gcc-16` |
+
+Design claude first recommended Cranelift (fast compiling, a JIT for programs that reshape themselves), before the
+concept. **With it: LLVM**, the only one with C's speed, inline binary in place and WebAssembly.
+
 ## H3. Platforms: where EEL runs
 
 macOS arm64 (here); Linux x86-64 / arm64 and Windows x86-64 (their Rust targets are installed); the browser (wasm32).
