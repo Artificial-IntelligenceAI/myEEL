@@ -98,7 +98,7 @@ Once a concept is picked, these follow, each the owner's:
 
 1. **How hard it should be to write**: hard but usable, as Befunge is, or deliberately hostile, as Malbolge is.
 2. **Turing completeness**: a goal to prove, or not a concern.
-3. **The interpreter's language**: Rust (as CyborgPL's oracle was), Python (quickest to change), or something else.
+3. **The interpreter's language**: now in `design/hosts.md`, H1.
 4. **The file extension**: `.eel`, or another.
 5. **Input and output**: numbers, characters, both.
 6. **What "EEL" stands for**: this folder says "Extraoridinary Esotric Language"; whether that spelling is on

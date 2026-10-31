@@ -26,7 +26,10 @@ The owner: "commit style: Soclets/CyborgPL". `kind.folder.narrowing: sentence`, 
 
 ## Open
 
+- **The hosts, first** (owner, 2026-10-31: "Let's do hosts first (tools, langs, backends, etc)"). Design claude's
+  proposals are in `design/hosts.md`, H1–H6: the host language, backends, platforms, tools, dependencies, hosting.
+  Design claude recommends Rust, a step interpreter as the executable spec, macOS and the browser first, a CLI and a
+  browser stepper that is also the playground, no crates in the interpreter, GitHub Pages and releases.
 - **The concept.** Design claude's five pitches are in `design/pitches.md` (A Body, B Life cycle, C Charge,
   D Slippery, E Knot); design claude recommends A. The owner's, or something else entirely.
-- What follows the concept: how hard it is to write, Turing completeness, the interpreter's language, the file
-  extension, input and output, what "EEL" stands for (`design/pitches.md`, "What comes after the concept").
+- What follows the concept: how hard it is to write, Turing completeness, the file extension, input and output, what "EEL" stands for (`design/pitches.md`, "What comes after the concept").
