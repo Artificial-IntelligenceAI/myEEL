@@ -5,6 +5,14 @@ Nothing here is final until the owner says so; open questions live at the bottom
 
 ## Decided
 
+### 2026-10-31 — The backend is LLVM, and EEL's implementation is written in C++ (owner: "LLVM, and C++")
+
+Design claude laid out Cranelift, LLVM and GCC (`design/hosts.md`, H2): first recommending Cranelift, then, with the
+owner's concept, LLVM, the one with C's speed, inline binary in the middle of a function (inline assembly) and
+WebAssembly. For the host language design claude had recommended Rust (H1). The owner: "LLVM, and C++". So **EEL
+compiles through LLVM, and its implementation is C++**, LLVM's own language. Not yet chosen: the LLVM version, the C++
+standard, the build system, whether a step interpreter stands beside the compiler.
+
 ### 2026-10-31 — EEL is the owner's fictional language, made real: everything is imported from the internet (owner)
 
 The owner: "EEL context: it was a fictional language that imports from the internet, has no stdout (it uses an import
@@ -43,8 +51,6 @@ The owner: "commit style: Soclets/CyborgPL". `kind.folder.narrowing: sentence`, 
 
 - **The hosts, first** (owner, 2026-10-31: "Let's do hosts first (tools, langs, backends, etc)"). Design claude's
   proposals are in `design/hosts.md`, H1–H6: the host language, backends, platforms, tools, dependencies, hosting.
-  Design claude recommends Rust, a step interpreter as the executable spec, macOS and the browser first, a CLI and a
+  Settled: H1 C++, H2 LLVM. Design claude recommends, for the rest, macOS and the browser first, a CLI and a
   browser stepper that is also the playground, no crates in the interpreter, GitHub Pages and releases.
 - Still open from `design/pitches.md`'s list: Turing completeness, the file extension, what "EEL" stands for.
-- The backend (owner, 2026-10-31: "Should we use Cranelift, LLVM, or GCC?"): `design/hosts.md`, H2; design claude
-  recommends LLVM, given the concept.

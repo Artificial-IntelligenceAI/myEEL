@@ -10,6 +10,8 @@ Node 24.16; Swift 6.4; OCaml 5.5; Nim 2.2; Java 26; .NET 10; Julia 1.12; Go, Zig
 
 ## H1. The host language: what EEL's implementation is written in
 
+**Decided 2026-10-31: C++** (owner: "LLVM, and C++"). Design claude had recommended Rust.
+
 | Option | For | Against |
 |---|---|---|
 | **Rust** | fast; one codebase builds the CLI and, through `wasm32` + `wasm-pack` (both installed), the browser; CyborgPL's oracle and `KAYO\n` were Rust | slower to change than a script |
@@ -20,6 +22,8 @@ Node 24.16; Swift 6.4; OCaml 5.5; Nim 2.2; Java 26; .NET 10; Julia 1.12; Go, Zig
 **Recommendation: Rust.** Concept doesn't change it.
 
 ## H2. Backends: how an EEL program runs
+
+**Decided 2026-10-31: LLVM** (owner: "LLVM, and C++").
 
 1. **A step interpreter**: one step at a time, the whole machine state visible after each. Every concept needs this;
    it is also what a debugger and a visualiser are built on.
