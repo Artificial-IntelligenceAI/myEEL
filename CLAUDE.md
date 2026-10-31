@@ -10,6 +10,8 @@ from nothing: no concept, syntax or semantics is settled until `DECISIONS.md` sa
   for an open decision. Ask in plain text and wait.
 - **No chat popups** (owner, 2026-10-31: "Use whatever's needed, except chat popups"): never the AskUserQuestion
   tool, nor a card or box asking the owner to pick.
+- **One question at a time** (owner, 2026-10-31): put a single question to the owner, wait for the answer, then the
+  next. A design file may list many; the conversation asks them one by one.
 - Record decisions in `DECISIONS.md` as they are made, noting what the owner chose against what was proposed.
 - Proposals live in `design/` until the owner picks; a pitch there is not a decision.
 
