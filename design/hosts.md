@@ -57,6 +57,8 @@ concept. **With it: LLVM**, the only one with C's speed, inline binary in place 
 
 ## H3. Platforms: where EEL runs
 
+**Decided 2026-10-31: macOS AArch64, Linux x86-64 and Linux AArch64** (owner: "1, 2").
+
 macOS arm64 (here); Linux x86-64 / arm64 and Windows x86-64 (their Rust targets are installed); the browser (wasm32).
 
 **Recommendation: macOS and the browser first**; Linux and Windows builds when there is a release.

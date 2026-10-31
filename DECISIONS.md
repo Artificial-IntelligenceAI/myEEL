@@ -5,6 +5,14 @@ Nothing here is final until the owner says so; open questions live at the bottom
 
 ## Decided
 
+### 2026-10-31 — EEL compiles for macOS on Apple Silicon and Linux on x86-64 and AArch64 (owner: "1, 2")
+
+Inline binary is one CPU's machine code, so each target is a CPU its programs' inline binary must be written for.
+Design claude offered (1) macOS AArch64 alone, (2) adding Linux x86-64 and AArch64, (3) adding Windows x86-64, (4)
+adding WebAssembly, all built into Homebrew's LLVM 23, and recommended (1) for now. The owner: "1, 2". So **EEL's
+targets are macOS AArch64, Linux x86-64 and Linux AArch64**: two CPUs' inline binary, two executable formats (Mach-O,
+ELF). Windows and WebAssembly are not targets.
+
 ### 2026-10-31 — CMake and Ninja build EEL's compiler (owner: "yup")
 
 Design claude offered CMake + Ninja (installed, 4.4.3 and 1.13.2; LLVM ships `LLVMConfig.cmake`, so
@@ -90,6 +98,6 @@ The owner: "commit style: Soclets/CyborgPL". `kind.folder.narrowing: sentence`, 
 
 - **The hosts, first** (owner, 2026-10-31: "Let's do hosts first (tools, langs, backends, etc)"). Design claude's
   proposals are in `design/hosts.md`, H1–H6: the host language, backends, platforms, tools, dependencies, hosting.
-  Settled: H1 C++23 built by clang 23 with CMake and Ninja, H2 LLVM 23. Design claude recommends, for the rest, macOS and the browser first, a CLI and a
+  Settled: H1 C++23 built by clang 23 with CMake and Ninja, H2 LLVM 23, H3 macOS AArch64 + Linux x86-64 and AArch64. Design claude recommends, for the rest, a CLI and a
   browser stepper that is also the playground, no crates in the interpreter, GitHub Pages and releases.
 - Still open from `design/pitches.md`'s list: Turing completeness, the file extension, what "EEL" stands for.
