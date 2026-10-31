@@ -5,6 +5,11 @@ Nothing here is final until the owner says so; open questions live at the bottom
 
 ## Decided
 
+### 2026-10-31 — The compiler's command is `eel` (owner: "yes")
+
+Design claude offered `eel`, the language's own name, or a name of the compiler's own (as CyborgPL's was `kayo`), and
+recommended `eel`. The owner: "yes".
+
 ### 2026-10-31 — The QEMU machines run Ubuntu 24.04 LTS, the Linux Claude's own sessions run on (owner: "The one that Claude uses")
 
 Design claude offered Debian 13 (recommended), Ubuntu 26.04 LTS, Alpine (musl) or Arch. The owner: "The one that
