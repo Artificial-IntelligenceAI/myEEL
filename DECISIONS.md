@@ -5,6 +5,13 @@ Nothing here is final until the owner says so; open questions live at the bottom
 
 ## Decided
 
+### 2026-10-31 — C++23 (owner: "C++23")
+
+Strictly, the latest standard clang 23 fully supports is C++17, and only its language: libc++ 23 has finished no
+standard's library. Design claude offered C++17, strict, or C++23, full for what EEL's compiler uses (none of the gaps
+touch a compiler: parallel algorithms, special maths, time zones, `std::generator`, `<stacktrace>`), and recommended
+C++23. The owner: "C++23". So **EEL's implementation is C++23**, staying clear of the parts clang 23 and libc++ 23 lack.
+
 ### 2026-10-31 — LLVM stays; EEL's C++ is the latest standard with full support (owner: "LLVM, C++ latest full support")
 
 Shown clang 23's C++26 lacking reflection, the owner asked whether to switch to GCC, then "No, I meant switching to
@@ -71,7 +78,3 @@ The owner: "commit style: Soclets/CyborgPL". `kind.folder.narrowing: sentence`, 
   Settled: H1 C++, H2 LLVM 23. Design claude recommends, for the rest, macOS and the browser first, a CLI and a
   browser stepper that is also the playground, no crates in the interpreter, GitHub Pages and releases.
 - Still open from `design/pitches.md`'s list: Turing completeness, the file extension, what "EEL" stands for.
-- **Which standard is "the latest full support"** (`design/hosts.md`, H1). From LLVM 23's own status pages: clang 23
-  supports all of C++17's language, not all of C++20's (modules, parts of coroutines) or C++23's (5 papers); libc++ 23
-  has not finished even C++17's library (parallel algorithms, special maths functions, part of `to_chars`), and lacks
-  36 of C++23's papers (`std::generator`, `<stacktrace>` among them).

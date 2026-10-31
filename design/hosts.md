@@ -11,7 +11,7 @@ Node 24.16; Swift 6.4; OCaml 5.5; Nim 2.2; Java 26; .NET 10; Julia 1.12; Go, Zig
 ## H1. The host language: what EEL's implementation is written in
 
 **Decided 2026-10-31: C++** (owner: "LLVM, and C++"), **the latest standard with full support** (owner: "LLVM, C++
-latest full support"). Design claude had recommended Rust. Which standard that is: `DECISIONS.md`, "Open".
+latest full support"). That is **C++23** (owner: "C++23"). Design claude had recommended Rust.
 
 | Option | For | Against |
 |---|---|---|
