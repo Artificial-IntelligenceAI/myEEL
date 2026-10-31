@@ -5,6 +5,16 @@ Nothing here is final until the owner says so; open questions live at the bottom
 
 ## Decided
 
+### 2026-10-31 — LLVM stays; EEL's C++ is the latest standard with full support (owner: "LLVM, C++ latest full support")
+
+Shown clang 23's C++26 lacking reflection, the owner asked whether to switch to GCC, then "No, I meant switching to
+GCC entirely". Design claude laid out GCC as the whole toolchain (libgccjit, EEL emitted as C for `gcc-16`, a GCC
+front end), tested EEL-as-C with inline binary under `gcc-16`, and GCC 16's reflection through LLVM's C API. Asked
+"Jeez, GCC is not like LLVM?", design claude explained GCC's monolithic design, libgccjit as the bolt-on library, and
+that libgccjit is GPLv3, so a compiler linking it would ship under GPLv3, not this repo's licence. The owner: "LLVM,
+C++ latest full support". So **LLVM 23 stays the backend**, and **the C++ standard is the latest one fully supported**;
+which standard that is, on clang 23 and libc++ 23, is open below.
+
 ### 2026-10-31 — LLVM 23, stable, pinned as `llvm@23` (owner: "The one you picked")
 
 Asked "Any unstable ones?", design claude listed LLVM's `main` (24.0.0git, never released, its C++ API moving every
@@ -61,3 +71,7 @@ The owner: "commit style: Soclets/CyborgPL". `kind.folder.narrowing: sentence`, 
   Settled: H1 C++, H2 LLVM 23. Design claude recommends, for the rest, macOS and the browser first, a CLI and a
   browser stepper that is also the playground, no crates in the interpreter, GitHub Pages and releases.
 - Still open from `design/pitches.md`'s list: Turing completeness, the file extension, what "EEL" stands for.
+- **Which standard is "the latest full support"** (`design/hosts.md`, H1). From LLVM 23's own status pages: clang 23
+  supports all of C++17's language, not all of C++20's (modules, parts of coroutines) or C++23's (5 papers); libc++ 23
+  has not finished even C++17's library (parallel algorithms, special maths functions, part of `to_chars`), and lacks
+  36 of C++23's papers (`std::generator`, `<stacktrace>` among them).
