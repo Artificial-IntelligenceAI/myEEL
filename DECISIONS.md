@@ -5,6 +5,12 @@ Nothing here is final until the owner says so; open questions live at the bottom
 
 ## Decided
 
+### 2026-10-31 — `eel` takes `.myEEL` exactly, any other casing refused (owner: "exact")
+
+This Mac's APFS ignores case (`Case.myEEL` opens as `case.myeel`), Ubuntu's file systems do not, so a wrong casing
+would work here and break on Linux. Design claude offered exactly `.myEEL` (recommended) or any casing. The owner:
+"exact". So **`eel` refuses `hello.myeel`, `hello.MYEEL` and every other casing**, naming `.myEEL`.
+
 ### 2026-10-31 — EEL source files end `.myEEL` (owner: "`.myEEL`")
 
 Design claude found `.eel` free in GitHub Linguist but used by REAPER's EEL2 scripts ("The type of script will be
