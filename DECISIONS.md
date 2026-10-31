@@ -5,6 +5,13 @@ Nothing here is final until the owner says so; open questions live at the bottom
 
 ## Decided
 
+### 2026-10-31 — LLVM 23, stable, pinned as `llvm@23` (owner: "The one you picked")
+
+Asked "Any unstable ones?", design claude listed LLVM's `main` (24.0.0git, never released, its C++ API moving every
+week; through `brew install llvm --HEAD` or a checkout pinned to a commit) and the `release/23.x` tip, and still
+recommended stable 23 (23.1.4, 2026-10-20; 23.1.2 is installed), pinned so a Homebrew move to 24 does not break the
+build. The owner: "The one you picked". So **EEL builds on stable LLVM 23**, `llvm@23`.
+
 ### 2026-10-31 — The backend is LLVM, and EEL's implementation is written in C++ (owner: "LLVM, and C++")
 
 Design claude laid out Cranelift, LLVM and GCC (`design/hosts.md`, H2): first recommending Cranelift, then, with the
@@ -51,6 +58,6 @@ The owner: "commit style: Soclets/CyborgPL". `kind.folder.narrowing: sentence`, 
 
 - **The hosts, first** (owner, 2026-10-31: "Let's do hosts first (tools, langs, backends, etc)"). Design claude's
   proposals are in `design/hosts.md`, H1–H6: the host language, backends, platforms, tools, dependencies, hosting.
-  Settled: H1 C++, H2 LLVM. Design claude recommends, for the rest, macOS and the browser first, a CLI and a
+  Settled: H1 C++, H2 LLVM 23. Design claude recommends, for the rest, macOS and the browser first, a CLI and a
   browser stepper that is also the playground, no crates in the interpreter, GitHub Pages and releases.
 - Still open from `design/pitches.md`'s list: Turing completeness, the file extension, what "EEL" stands for.

@@ -23,7 +23,8 @@ Node 24.16; Swift 6.4; OCaml 5.5; Nim 2.2; Java 26; .NET 10; Julia 1.12; Go, Zig
 
 ## H2. Backends: how an EEL program runs
 
-**Decided 2026-10-31: LLVM** (owner: "LLVM, and C++").
+**Decided 2026-10-31: LLVM** (owner: "LLVM, and C++"), **stable 23, pinned as `llvm@23`** (owner: "The one you
+picked").
 
 1. **A step interpreter**: one step at a time, the whole machine state visible after each. Every concept needs this;
    it is also what a debugger and a visualiser are built on.
